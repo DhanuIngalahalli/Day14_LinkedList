@@ -25,7 +25,34 @@ namespace LinkedList
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} inserted", node.data);
+        }
+        /// <summary>
+        /// inserting at particular position
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="data"></param>
+        public void Insert(int pos, int data)
+        {
+            Node node = new Node(data);
+            if (pos < 1)
+                Console.WriteLine("Invalid Position");
+            else if (pos == 1)
+            {
+                node.next = head;
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+
+                while (pos > 2)
+                {
+                    temp = temp.next;
+                    pos--;
+                }
+                node.next = temp.next;
+                temp.next = node;
+            }
         }
         /// <summary>
         /// creating method for display
