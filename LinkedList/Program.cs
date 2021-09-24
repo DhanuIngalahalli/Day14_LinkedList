@@ -18,8 +18,9 @@ namespace LinkedList
             //list.RemoveLast();
             //list.Display();
 
-            Console.WriteLine(list.Search(30));
-
+            // Console.WriteLine(list.Search(30));
+            
+            Console.WriteLine("Size of linked list is : " +list.Size());
         }
     }
 }

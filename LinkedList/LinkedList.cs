@@ -102,7 +102,21 @@ namespace LinkedList
             }
             return false;
         }
-
+        /// <summary>
+        /// finding size of linkedlist
+        /// </summary>
+        /// <returns></returns>
+        public int Size()
+        {
+            int a = 0;
+            Node temp = head;
+            while (temp != null)
+            {
+                a++;
+                temp = temp.next;
+            }
+            return a;
+        }
         /// <summary>
         /// creating method for display
         /// </summary>
