@@ -67,6 +67,43 @@ namespace LinkedList
             return this.head;
         }
         /// <summary>
+        /// delete last elelment
+        /// </summary>
+        /// <returns></returns>
+        internal Node RemoveLast()
+        {
+            if (head == null)
+                return null;
+            if (head.next == null)
+                return null;
+            Node newNode = head;
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            newNode.next = null;
+            return head;
+        }
+        /// <summary>
+        /// method to search 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public bool Search(int value)
+        {
+            Node temp = head;
+            while (temp != null)
+            {
+                if (temp.data.Equals(value))
+                {
+                    return true;
+                }
+                temp = temp.next;
+            }
+            return false;
+        }
+
+        /// <summary>
         /// creating method for display
         /// </summary>
         internal void Display()

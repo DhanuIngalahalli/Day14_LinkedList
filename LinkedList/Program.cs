@@ -14,9 +14,12 @@ namespace LinkedList
             Console.WriteLine("Linked list elements are:");
             list.Display();
             // list.Insert(2,30);
-            Console.WriteLine("Linked list elements after deleting first node :");
-            list.RemoveFirst();
-            list.Display();
+            //Console.WriteLine("Linked list elements after deleting first node :");
+            //list.RemoveLast();
+            //list.Display();
+
+            Console.WriteLine(list.Search(30));
+
         }
     }
 }
