@@ -11,10 +11,12 @@ namespace LinkedList
             list.Add(56);
             list.Add(30);
             list.Add(70);
+            list.Insert(3, 40);
             Console.WriteLine("Linked list elements are:");
             list.Display();
-            list.Insert(3,40);
-            Console.WriteLine("Linked list elements after inserting :");
+           
+            list.Delete(40);
+            Console.WriteLine("Linked list elements after deleting :");
             //list.RemoveLast();
             list.Display();
 
