@@ -25,6 +25,7 @@ namespace LinkedList
                 }
                 temp.next = node;
             }
+            Console.WriteLine("{0} inserted", node.data);
         }
         /// <summary>
         /// inserting at particular position
@@ -53,6 +54,17 @@ namespace LinkedList
                 node.next = temp.next;
                 temp.next = node;
             }
+        }
+        /// <summary>
+        /// removing first element
+        /// </summary>
+        /// <returns></returns>
+        internal Node RemoveFirst()
+        {
+            if (this.head == null)
+                return null;
+            this.head = this.head.next;
+            return this.head;
         }
         /// <summary>
         /// creating method for display
