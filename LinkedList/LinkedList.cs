@@ -4,21 +4,21 @@ using System.Text;
 
 namespace LinkedList
 {
-    class LinkedList
+    class LinkedList<T>
     {
-        internal Node head;
+        internal Node<T> head;
         /// <summary>
         /// creating method to add data
         /// </summary>
         /// <param name="data"></param>
-        internal void Add(int data)
+        internal void Add(T data)
         {
-            Node node = new Node(data);
+            Node<T> node = new Node<T>(data);
             if (this.head == null)
                 this.head = node;
             else
             {
-                Node temp = head;
+                Node<T> temp = head;
                 while (temp.next != null)
                 {
                     temp = temp.next;
@@ -32,9 +32,9 @@ namespace LinkedList
         /// </summary>
         /// <param name="position"></param>
         /// <param name="data"></param>
-        public void Insert(int pos, int data)
+        public void Insert(int pos, T data)
         {
-            Node node = new Node(data);
+            Node<T> node = new Node<T>(data);
             if (pos < 1)
                 Console.WriteLine("Invalid Position");
             else if (pos == 1)
@@ -44,7 +44,7 @@ namespace LinkedList
             }
             else
             {
-                Node temp = head;
+                Node<T> temp = head;
 
                 while (pos > 2)
                 {
@@ -59,7 +59,7 @@ namespace LinkedList
         /// removing first element
         /// </summary>
         /// <returns></returns>
-        internal Node RemoveFirst()
+        internal Node<T> RemoveFirst()
         {
             if (this.head == null)
                 return null;
@@ -70,13 +70,13 @@ namespace LinkedList
         /// delete last elelment
         /// </summary>
         /// <returns></returns>
-        internal Node RemoveLast()
+        internal Node<T> RemoveLast()
         {
             if (head == null)
                 return null;
             if (head.next == null)
                 return null;
-            Node newNode = head;
+            Node<T> newNode = head;
             while (newNode.next.next != null)
             {
                 newNode = newNode.next;
@@ -91,7 +91,7 @@ namespace LinkedList
         /// <returns></returns>
         public bool Search(int value)
         {
-            Node temp = head;
+            Node<T> temp = head;
             while (temp != null)
             {
                 if (temp.data.Equals(value))
@@ -102,7 +102,21 @@ namespace LinkedList
             }
             return false;
         }
-
+        /// <summary>
+        /// finding size of linkedlist
+        /// </summary>
+        /// <returns></returns>
+        public int Size()
+        {
+            int a = 0;
+            Node<T> temp = head;
+            while (temp != null)
+            {
+                a++;
+                temp = temp.next;
+            }
+            return a;
+        }
         /// <summary>
         /// creating method for display
         /// </summary>
@@ -112,7 +126,7 @@ namespace LinkedList
                 Console.WriteLine("The list is empty.");
             else
             {
-                Node temp = head;
+                Node<T> temp = head;
                 while (temp != null)
                 {
                     Console.WriteLine(temp.data);

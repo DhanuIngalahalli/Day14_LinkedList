@@ -7,7 +7,7 @@ namespace LinkedList
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to linked list");
-            LinkedList list = new LinkedList(); //creating list
+            LinkedList<int> list = new LinkedList<int>(); //creating list
             list.Add(56);
             list.Add(30);
             list.Add(70);
@@ -19,6 +19,7 @@ namespace LinkedList
             list.Display();
 
             //Console.WriteLine(list.Search(30));
+            Console.WriteLine("Size of linked list is : " + list.Size());
 
         }
     }
