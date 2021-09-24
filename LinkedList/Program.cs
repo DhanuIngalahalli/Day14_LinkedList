@@ -13,12 +13,12 @@ namespace LinkedList
             list.Add(70);
             Console.WriteLine("Linked list elements are:");
             list.Display();
-            // list.Insert(2,30);
-            //Console.WriteLine("Linked list elements after deleting first node :");
+            list.Insert(3,40);
+            Console.WriteLine("Linked list elements after inserting :");
             //list.RemoveLast();
-            //list.Display();
+            list.Display();
 
-            Console.WriteLine(list.Search(30));
+            //Console.WriteLine(list.Search(30));
 
         }
     }
