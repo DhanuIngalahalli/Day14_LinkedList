@@ -11,7 +11,7 @@ namespace LinkedList
         /// creating method to add data
         /// </summary>
         /// <param name="data"></param>
-        internal void Add(int data)
+        internal void Append(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -25,8 +25,8 @@ namespace LinkedList
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} inserted", node.data);
         }
+
         /// <summary>
         /// creating method for display
         /// </summary>
